@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  background-color: #134e7e;
+}
+
+#content {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(180deg, #56ccf2 0%, #2f80ed 55%, #134e7e 100%);
+}
+
+.seabed {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 60px;
+  background: #d8c39e;
+  z-index: 1;
+}
+
+.creature {
+  position: absolute;
+  left: 0;
+  z-index: 5;
+}
+
+.creature img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#shark {
+  width: 190px;
+  top: 14%;
+  animation: swimShark 12s linear infinite;
+}
+
+#goldFishSchool {
+  width: 140px;
+  top: 32%;
+  animation: swimGold 16s linear infinite;
+}
+
+#faintSchool {
+  width: 130px;
+  top: 24%;
+  opacity: 0.85;
+  animation: swimFaint 21s linear infinite;
+}
+
+#diver1 {
+  width: 145px;
+  top: 22%;
+  animation: diveOne 18s linear infinite;
+}
+
+#diver2 {
+  width: 135px;
+  top: 46%;
+  animation: diveTwo 22s linear infinite;
+}
+
+#diver3 {
+  width: 130px;
+  top: 36%;
+  animation: diveThree 26s linear infinite;
+}
+
+#turtle {
+  width: 125px;
+  bottom: 70px;
+  animation: swimTurtle 28s linear infinite;
+}
+
+.bubble {
+  position: absolute;
+  bottom: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  z-index: 3;
+  animation: riseUp 7s linear infinite;
+}
+
+.b1 { left: 12%; width: 14px; height: 14px; animation-duration: 6s; animation-delay: 0s; }
+.b2 { left: 28%; width: 10px; height: 10px; animation-duration: 8s; animation-delay: 2s; }
+.b3 { left: 48%; width: 16px; height: 16px; animation-duration: 7s; animation-delay: 1s; }
+.b4 { left: 68%; width: 12px; height: 12px; animation-duration: 9s; animation-delay: 3s; }
+.b5 { left: 86%; width: 14px; height: 14px; animation-duration: 6.5s; animation-delay: 1.5s; }
+
+@keyframes swimShark {
+  0%     { left: 2%;  top: 14%; transform: scaleX(1); }
+  49.9%  { left: calc(98% - 190px); top: 12%; transform: scaleX(1); }
+  50%    { left: calc(98% - 190px); top: 12%; transform: scaleX(-1); }
+  99.9%  { left: 2%;  top: 14%; transform: scaleX(-1); }
+  100%   { left: 2%;  top: 14%; transform: scaleX(1); }
+}
+
+@keyframes swimGold {
+  0%     { left: 4%;  top: 32%; transform: scaleX(1); }
+  49.9%  { left: calc(96% - 140px); top: 36%; transform: scaleX(1); }
+  50%    { left: calc(96% - 140px); top: 36%; transform: scaleX(-1); }
+  99.9%  { left: 4%;  top: 32%; transform: scaleX(-1); }
+  100%   { left: 4%;  top: 32%; transform: scaleX(1); }
+}
+
+@keyframes swimFaint {
+  0%     { left: calc(96% - 130px); top: 24%; transform: scaleX(-1); }
+  49.9%  { left: 4%;  top: 28%; transform: scaleX(-1); }
+  50%    { left: 4%;  top: 28%; transform: scaleX(1); }
+  99.9%  { left: calc(96% - 130px); top: 24%; transform: scaleX(1); }
+  100%   { left: calc(96% - 130px); top: 24%; transform: scaleX(-1); }
+}
+
+@keyframes diveOne {
+  0%     { left: 5%;  top: 20%; transform: scaleX(1); }
+  25%    { left: 45%; top: 55%; transform: scaleX(1); }
+  49.9%  { left: calc(95% - 145px); top: 28%; transform: scaleX(1); }
+  50%    { left: calc(95% - 145px); top: 28%; transform: scaleX(-1); }
+  75%    { left: 48%; top: 18%; transform: scaleX(-1); }
+  99.9%  { left: 5%;  top: 20%; transform: scaleX(-1); }
+  100%   { left: 5%;  top: 20%; transform: scaleX(1); }
+}
+
+@keyframes diveTwo {
+  0%     { left: calc(95% - 135px); top: 48%; transform: scaleX(-1); }
+  25%    { left: 52%; top: 68%; transform: scaleX(-1); }
+  49.9%  { left: 6%;  top: 40%; transform: scaleX(-1); }
+  50%    { left: 6%;  top: 40%; transform: scaleX(1); }
+  75%    { left: 50%; top: 30%; transform: scaleX(1); }
+  99.9%  { left: calc(95% - 135px); top: 48%; transform: scaleX(1); }
+  100%   { left: calc(95% - 135px); top: 48%; transform: scaleX(-1); }
+}
+
+@keyframes diveThree {
+  0%     { left: 10%; top: 58%; transform: scaleX(1); }
+  25%    { left: 46%; top: 34%; transform: scaleX(1); }
+  49.9%  { left: calc(94% - 130px); top: 64%; transform: scaleX(1); }
+  50%    { left: calc(94% - 130px); top: 64%; transform: scaleX(-1); }
+  75%    { left: 44%; top: 48%; transform: scaleX(-1); }
+  99.9%  { left: 10%; top: 58%; transform: scaleX(-1); }
+  100%   { left: 10%; top: 58%; transform: scaleX(1); }
+}
+
+@keyframes swimTurtle {
+  0%     { left: 3%;  bottom: 70px; transform: scaleX(1); }
+  49.9%  { left: calc(97% - 125px); bottom: 86px; transform: scaleX(1); }
+  50%    { left: calc(97% - 125px); bottom: 86px; transform: scaleX(-1); }
+  99.9%  { left: 3%;  bottom: 70px; transform: scaleX(-1); }
+  100%   { left: 3%;  bottom: 70px; transform: scaleX(1); }
+}
+
+@keyframes riseUp {
+  0%   { transform: translateY(0); opacity: 0; }
+  15%  { opacity: 0.85; }
+  90%  { opacity: 0.7; }
+  100% { transform: translateY(-92vh); opacity: 0; }
+}
+
+@media (max-width: 600px) {
+  #shark { width: 135px; }
+  #goldFishSchool, #faintSchool { width: 100px; }
+  #diver1, #diver2, #diver3 { width: 105px; }
+  #turtle { width: 95px; }
+}
